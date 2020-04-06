@@ -209,7 +209,7 @@ RCT_EXPORT_METHOD(prepare:(nonnull NSNumber*)playerId
     }
     Float64 loadedDurationSeconds = 0;
     Float64 totalDurationSeconds = CMTimeGetSeconds(player.currentItem.duration);
-    while (loadedDurationSeconds < 10 && loadedDurationSeconds < totalDurationSeconds){
+    while (loadedDurationSeconds < 2 && loadedDurationSeconds < totalDurationSeconds){
         NSValue *val = player.currentItem.loadedTimeRanges.firstObject;
         CMTimeRange timeRange;
         [val getValue:&timeRange];
